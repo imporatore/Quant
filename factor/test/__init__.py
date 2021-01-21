@@ -40,7 +40,6 @@ def weighted_factor_value(factor_score, free_shares, returns, mindex, n_top=50):
     if isinstance(free_shares, pd.DataFrame):
         free_shares = free_shares.values
 
-
     if isinstance(returns, pd.DataFrame):
         returns = returns.values
 

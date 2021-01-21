@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53b53c01-6113-4e13-9c24-55ea4fa7174b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/Portifolio.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ESG/test/esg_score_test.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ESG/test/esg_score_test.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/factor/test/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/factor/test/__init__.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,6 +67,8 @@
       <updated>1610954613808</updated>
       <workItem from="1610954615063" duration="2113000" />
       <workItem from="1610956762622" duration="5232000" />
+      <workItem from="1611236531554" duration="974000" />
+      <workItem from="1611237564278" duration="1366000" />
     </task>
     <servers />
   </component>
@@ -79,7 +80,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
