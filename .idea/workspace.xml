@@ -2,11 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53b53c01-6113-4e13-9c24-55ea4fa7174b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/factor/test/naive_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ESG/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pipelines/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/converters.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/index.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/weight.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ESG/TestFramework.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ESG/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/ESG/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ESG/esg_score_test.ipynb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ESG/test/esg_score_test.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ESG/test/esg_score_test.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/factor/test/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/factor/test/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/test_portfolio.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/test_portfolio.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/factor/test/naive_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/factor/test/naive_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/plot.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/plot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/toshare_pipeline.py" beforeDir="false" afterPath="$PROJECT_DIR$/pipelines/toshare_pipeline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/wind_pipeline.py" beforeDir="false" afterPath="$PROJECT_DIR$/pipelines/wind_pipeline.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,6 +28,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Jupyter Notebook" />
         <option value="Python Script" />
       </list>
     </option>
@@ -48,6 +60,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\PycharmProjects\Quant\pipelines" />
       <recent name="C:\PycharmProjects\Quant\factor\test" />
       <recent name="C:\PycharmProjects\Quant\ESG" />
     </key>
@@ -133,7 +146,9 @@
       <workItem from="1611240342855" duration="30413000" />
       <workItem from="1611540093923" duration="7041000" />
       <workItem from="1611574418446" duration="8869000" />
-      <workItem from="1611623011571" duration="3143000" />
+      <workItem from="1611623011571" duration="17104000" />
+      <workItem from="1611882296058" duration="2937000" />
+      <workItem from="1611887673552" duration="10497000" />
     </task>
     <servers />
   </component>
@@ -152,6 +167,26 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/factor/test/naive_test.py</url>
+          <line>7</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/factor/test/naive_test.py</url>
+          <line>98</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/factor/test/naive_test.py</url>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Quant$98u98.coverage" NAME="98u98 Coverage Results" MODIFIED="1611577142832" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ESG/test" />
