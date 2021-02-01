@@ -2,28 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53b53c01-6113-4e13-9c24-55ea4fa7174b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ESG/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pipelines/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/converters.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/index.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/weight.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ESG/TestFramework.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ESG/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/ESG/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ESG/esg_score_test.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ESG/test/esg_score_test.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ESG/test/esg_score_test.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/factor/test/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/factor/test/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/factor/test/naive_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/factor/test/naive_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/plot.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/plot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/toshare_pipeline.py" beforeDir="false" afterPath="$PROJECT_DIR$/pipelines/toshare_pipeline.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/wind_pipeline.py" beforeDir="false" afterPath="$PROJECT_DIR$/pipelines/wind_pipeline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ESG/esg_alter_events.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ESG/esg_alter_events.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -148,7 +148,8 @@
       <workItem from="1611574418446" duration="8869000" />
       <workItem from="1611623011571" duration="17104000" />
       <workItem from="1611882296058" duration="2937000" />
-      <workItem from="1611887673552" duration="10497000" />
+      <workItem from="1611887673552" duration="30243000" />
+      <workItem from="1612142177296" duration="5488000" />
     </task>
     <servers />
   </component>
