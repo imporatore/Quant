@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53b53c01-6113-4e13-9c24-55ea4fa7174b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ESG/test/esg_score_test_our.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ESG/test/esg_score_test.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ESG/test/esg_score_test_miaoying.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ESG/esg_alter_events.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ESG/esg_alter_events.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,6 +41,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="D:/Github/CodeShare" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -151,7 +151,7 @@
       <workItem from="1611882296058" duration="2937000" />
       <workItem from="1611887673552" duration="30243000" />
       <workItem from="1612142177296" duration="6916000" />
-      <workItem from="1612172916797" duration="8423000" />
+      <workItem from="1612172916797" duration="18694000" />
     </task>
     <servers />
   </component>
