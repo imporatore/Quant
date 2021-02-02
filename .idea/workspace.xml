@@ -4,6 +4,9 @@
     <list default="true" id="53b53c01-6113-4e13-9c24-55ea4fa7174b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ESG/esg_alter_events.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ESG/esg_alter_events.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ESG/test/esg_score_test.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ESG/test/esg_score_test.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/factor/test/naive_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/factor/test/naive_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/converters.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/converters.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -149,7 +152,8 @@
       <workItem from="1611623011571" duration="17104000" />
       <workItem from="1611882296058" duration="2937000" />
       <workItem from="1611887673552" duration="30243000" />
-      <workItem from="1612142177296" duration="5488000" />
+      <workItem from="1612142177296" duration="6916000" />
+      <workItem from="1612172916797" duration="3155000" />
     </task>
     <servers />
   </component>
@@ -169,28 +173,8 @@
       </map>
     </option>
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/factor/test/naive_test.py</url>
-          <line>7</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/factor/test/naive_test.py</url>
-          <line>98</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/factor/test/naive_test.py</url>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Quant$98u98.coverage" NAME="98u98 Coverage Results" MODIFIED="1611577142832" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ESG/test" />
-    <SUITE FILE_PATH="coverage/Quant$naive_test.coverage" NAME="naive_test Coverage Results" MODIFIED="1611624842264" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/factor/test" />
+    <SUITE FILE_PATH="coverage/Quant$naive_test.coverage" NAME="naive_test Coverage Results" MODIFIED="1612174590160" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/factor/test" />
   </component>
 </project>

@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 
 from utils import to_numpy
-from utils.plot import level_plot
+from utils.plot import *
 
 
 def fs_weighted_top_factor_return_rate(factor_score, free_shares, returns, mindex, n_top=20, mname=''):
@@ -64,46 +64,8 @@ def fs_weighted_top_factor_return_rate(factor_score, free_shares, returns, minde
     plt.legend()
 
 
-def fs_weighted_n_levels_factor_return_rate(factor_score, free_shares, returns, mindex, n_top=20, mname=''):
-    dates = pd.to_datetime(mindex.DATETIME)
-    if not mname:
-        mname = mindex.columns[-1]
-
-    factor_score = to_numpy(factor_score)
-    free_shares = to_numpy(free_shares)
-    returns = to_numpy(returns)
-
-    top_k_returns = [1., ]
-    bot_k_returns = [1., ]
-
-    for date in range(factor_score.shape[1] - 2):
-        mask = (free_shares[:, date+1] > 0)
-        factor_rank = sorted(np.arange(np.sum(mask)),
-                             key=lambda i: factor_score[mask, date+1][i],
-                             reverse=True)
-        top_k = factor_rank[:n_top]
-        bot_k = factor_rank[-n_top:]
-        top_k_returns.append(np.sum(returns[mask, date+2][top_k] * free_shares[mask, date+1][top_k]) /
-                             np.sum(returns[mask, date+1][top_k] * free_shares[mask, date+1][top_k]) * top_k_returns[-1])
-        bot_k_returns.append(np.sum(returns[mask, date+2][bot_k] * free_shares[mask, date+1][bot_k]) /
-                             np.sum(returns[mask, date+1][bot_k] * free_shares[mask, date+1][bot_k]) * bot_k_returns[-1])
-
-    plt.plot(dates, 100. * (np.array(top_k_returns) - 1), label=f"{mname}高评分{n_top}组合")
-    plt.plot(dates, 100. * (mindex.values[:, 1] / mindex.values[0, 1] - 1.), label=f"{mname}")
-    plt.plot(dates, 100. * (np.array(bot_k_returns) - 1), label=f"{mname}低评分{n_top}组合")
-    plt.xlabel('日期')
-    plt.ylabel("区间累计回报（%）")
-    plt.legend()
-
-
 if __name__ == "__main__":
     import os
-
-    from utils.plot import *
-    import matplotlib.pyplot as plt
-
-    plt.rcParams['font.sans-serif'] = ['SimHei']
-    plt.rcParams['axes.unicode_minus'] = False
 
     from ESG.config import TEST_DATA_DIR, RAW_DATA_DIR, FIGURE_DIR, RESULT_DIR
 
