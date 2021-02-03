@@ -64,6 +64,84 @@ def fs_weighted_top_factor_return_rate(factor_score, free_shares, returns, minde
     plt.legend()
 
 
+def fs_weighted_ind_neutral_top_factor_return_rate(factor_score, industry, free_shares, returns,
+                                                   mindex, n_bins=5, mname=''):
+    """
+    Compute market free shares weighted value for stocks with
+
+    top-k & bottom-k factor scores, all parameters should have
+    corresponding rank of axis datetime & stock.
+
+    Params:
+        - factor_score: pd.DataFrame, dir: +, sample:
+        STOCK_CODE        DATE1        DATE2        DATE3
+         xxxxxx            xxx          xxx          xxx
+         xxxxxx            xxx          xxx          xxx
+
+        - free_shares: pd.DataFrame, sample:
+        STOCK_CODE        DATE1        DATE2        DATE3
+         xxxxxx            xxx          xxx          xxx
+         xxxxxx            xxx          xxx          xxx
+
+        - industry: pd.DataFrame, sample:
+        STOCK_CODE        INDUSTRY
+         xxxxxx             xxx
+         xxxxxx             xxx
+
+        - returns: pd.DataFrame, sample:
+        STOCK_CODE        DATE1        DATE2        DATE3
+         xxxxxx            xxx          xxx          xxx
+         xxxxxx            xxx          xxx          xxx
+
+        - mindex: pd.DataFrame, sample:
+        DATETIME        INDEX
+         xxxxx           xxx
+         xxxxx           xxx
+    """
+    dates = pd.to_datetime(mindex.DATETIME)
+    if not mname:
+        mname = mindex.columns[-1]
+
+    factor_score = to_numpy(factor_score)
+    free_shares = to_numpy(free_shares)
+    returns = to_numpy(returns)
+
+    n_returns = [[1., ] for _ in range(n_bins)]
+
+    for date in range(factor_score.shape[1] - 2):
+        mask = (free_shares[:, date+1] > 0)
+        factor_rank = sorted(np.arange(np.sum(mask)),
+                             key=lambda i: factor_score[mask, date+1][i],
+                             reverse=True)
+        industry_factor_rank = [np.array(factor_rank)[i] for i in
+                                industry.loc[mask, :].groupby(by=['INDUSTRY']).indices.values()]
+        industry_k = [len(i) / n_bins for i in industry_factor_rank]
+
+        for i in range(n_bins):
+            cur = list()
+            weight = list()
+
+            for j in industry_k:
+                cur.extend(range(int(np.floor(j*i)), int(np.ceil(j*(i+1)))))
+                if j*(i+1) > np.ceil(j*i + 1e-10):
+                    weight.append(np.ceil(j*i + 1e-10) - j*i)
+                    weight.extend([1] * (len(range(int(np.floor(j*i)), int(np.ceil(j*(i+1)))))-2))
+                    weight.append(j*(i+1) - np.floor(j*(i+1) - 1e-10))
+                else:
+                    weight.append(j)
+
+            n_returns[i].append(np.sum(returns[mask, date+2][cur] * free_shares[mask, date+1][cur] * np.array(weight)) /
+                                np.sum(returns[mask, date+1][cur] * free_shares[mask, date+1][cur] * np.array(weight))
+                                * n_returns[i][-1])
+
+    for i in range(n_bins):
+        plt.plot(dates, 100. * (np.array(n_returns[i]) - 1), label=f"{mname}第{i+1}高评分组合")
+    plt.plot(dates, 100. * (mindex.values[:, 1] / mindex.values[0, 1] - 1.), label=f"{mname}")
+    plt.xlabel('日期')
+    plt.ylabel("区间累计回报（%）")
+    plt.legend()
+
+
 if __name__ == "__main__":
     import os
 
@@ -86,7 +164,7 @@ if __name__ == "__main__":
     sz_stock_df['STOCK_CODE'] = sz_stock_df['STOCK_CODE'].apply(lambda x: '0' * (6 - len(str(x))) + str(x))
     sz_score_df = pd.merge(sz_stock_df, score_df, how='left', on='STOCK_CODE')
 
-    zz_800_df = pd.read_csv(os.path.join(r"D:\QuantData\中证指数", '中证800指数（2017-2019）.csv'))
+    zz_800_df = pd.read_csv(os.path.join(r"D:\QuantData\指数", '中证800指数（2017-2019）.csv'))
     dates = pd.to_datetime(zz_800_df['DATETIME'])
 
     zz_800_close = pd.read_csv(os.path.join(r"D:\QuantData\中证800成分股", '中证800股收盘价（2017-2019）.csv'))
@@ -103,6 +181,8 @@ if __name__ == "__main__":
         factor_scores.loc[:, d._date_repr] = zz_score_df.loc[zz_score_df['REPORT_YEAR']==d.year, 'ESG_SCORE'].values
 
     plt.figure(figsize=(20, 8), dpi=60)
-    fs_weighted_top_factor_return_rate(factor_scores, zz_800_fs, zz_800_close, zz_800_df, mname='中证800')
-    plt.savefig(os.path.join(FIGURE_DIR, "中证800ESG投资组合累计收益.png"))
+    fs_weighted_ind_neutral_top_factor_return_rate(factor_scores, zz_score_df.iloc[3 * np.arange(800)][
+        ['STOCK_CODE', 'INDUSTRY']].copy().reset_index(drop=True),zz_800_fs, zz_800_close, zz_800_df, mname='中证800')
+    plt.savefig(os.path.join(FIGURE_DIR, "中证800妙盈行业中性ESG投资组合累计收益.png"))
+
 

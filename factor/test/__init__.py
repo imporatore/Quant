@@ -1,1 +1,1 @@
-from factor.test.naive_test import fs_weighted_top_factor_return_rate
+from factor.test.naive_test import fs_weighted_top_factor_return_rate, fs_weighted_ind_neutral_top_factor_return_rate
